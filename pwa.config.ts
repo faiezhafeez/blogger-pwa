@@ -1,47 +1,26 @@
-import { defineConfig } from '@/types/config';
+import { defineConfig } from './src/types';
 
 export default defineConfig({
-  manifest: {
-    id: '/',
-    name: 'My Blog',
-    short_name: 'My Blog',
-    description: 'My blog description goes here...',
-    dir: 'auto',
-    lang: 'en-US',
-    background_color: '#fff',
-    theme_color: '#fff',
-    display: 'standalone',
-    orientation: 'natural',
-    scope: '/',
-    start_url: '/?utm_source=homescreen',
-    prefer_related_applications: false,
-    shortcuts: [
-      {
-        name: 'Shortcut 1',
-        short_name: 'Shortcut 1',
-        description: 'Shortcut 1 description goes here...',
-        url: '/search/label/shortcut-1?utm_source=homescreen',
-      },
-      {
-        name: 'Shortcut 2',
-        short_name: 'Shortcut 2',
-        description: 'Shortcut 2 description goes here...',
-        url: '/search/label/shortcut-2?utm_source=homescreen',
-      },
-    ],
-  },
-
-  pwa: {
-    logs: true,
-  },
-
-  // OneSignal is only available if you are using cloudflare workers
-  oneSignal: {
-    enabled: false, // To enable OneSignal, set this to true
-    appId: '********-****-****-****-************', // Replace with your OneSignal App Id
-    allowLocalhostAsSecureOrigin: true,
-  },
-
-  // Please replace with your blog url if you are using CDN (JsDelivr)
-  origin: 'https://taleemwaly.blogspot.com',
+  origin: "https://taleemwaly.blogspot.com",
+  name: "Taleemwaly",
+  short_name: "Taleemwaly",
+  description: "Matric to Master notes, past papers, guess papers, and results for all Pakistani boards",
+  theme_color: "#482dff",
+  background_color: "#ffffff",
+  display: "standalone",
+  orientation: "portrait",
+  start_url: "/",
+  scope: "/",
+  shortcuts: [
+    {
+      name: "AIOU Assignments",
+      short_name: "Assignments",
+      url: "/p/aiou-assignments.html",
+    },
+    {
+      name: "Guess Papers",
+      short_name: "Guess",
+      url: "/p/aiou-guess-paper.html",
+    },
+  ],
 });
