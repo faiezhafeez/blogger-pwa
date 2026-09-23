@@ -11,4 +11,16 @@ export default defineConfig({
   orientation: "portrait",
   start_url: "/",
   scope: "/",
+  shortcuts: [
+    {
+      name: "AIOU Assignments",
+      short_name: "Assignments",
+      url: "/p/aiou-assignments.html",
+    },
+    {
+      name: "Guess Papers",
+      short_name: "Guess",
+      url: "/p/aiou-guess-paper.html",
+    },
+  ],
 });
